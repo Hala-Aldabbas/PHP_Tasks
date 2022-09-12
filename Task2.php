@@ -1,6 +1,6 @@
 <?php
 
-//1. Write a PHP script to check if the inserted number is a prime number 
+//Q1 
 function Prime($n)
 {
     if($n ==1)
@@ -19,14 +19,14 @@ function Prime($n)
 echo Prime(3);
 echo "<br>";
 
-// 2. Write a PHP script to reverse a string
+// Q2
 function reverse($string){
   return strrev($string);
 }
 echo reverse("remove");
 echo "<br>";
 
-//3.  Write a PHP script to check if the all string characters are lower cases
+//Q3
 
 function lower($string){
   if($string === strtolower($string)){
@@ -41,7 +41,7 @@ echo "<br>";
 echo Lower("ReMove");
 echo "<br>";
 
-// 4. Write a PHP function to swap to variables
+// Q4 Q5
 
 function swap($x , $y){
   $temp = $x;
@@ -52,7 +52,7 @@ function swap($x , $y){
 echo swap(12 , 10);
 echo "<br>";
 
-// 6. Write a PHP function to check if a number is an Armstrong number or not ?
+// Q6
 function Armstrong($num){
   $sum=0;
   $x=$num;
@@ -69,7 +69,7 @@ function Armstrong($num){
 }
 echo Armstrong(407);
 echo "<br>";
-// ​7. Write a PHP function that checks whether a passed string is a palindrome or not
+// Q7
 
 function palindrome($string){
   if ($string == strrev($string)){
@@ -80,7 +80,7 @@ function palindrome($string){
 }palindrome('Eva, can I see bees in a cave');
 echo "<br>";
 
-//8.Write a PHP function to remove duplicates from an array 
+//Q8
 function duplicates($arr)
 {
     print_r(array_unique($arr));
@@ -251,3 +251,5 @@ if ($sum <= 60){
 }avarage ([60,86,95,63,55,74,79,62,50]); echo "<br>";
 avarage ([60,86,95,63,55,74,79,62,100]); echo "<br>";
 avarage ([60,86,95,93,95,74,79,62,100]); echo "<br>";
+
+?>
