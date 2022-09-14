@@ -48,20 +48,16 @@ foreach ($fruits as $key => $value) {
 }
 //Task 7
 echo "<br>";echo "Array Task 7"; echo "<br>";
-$temp= [70, 65, 80, 56, 57, 63, 64, 85, 66, 90, 86];
-$lowest = array_slice($temp, 0, 5);
-$highest = array_slice($temp, -5);
+$temp= array(70, 65, 80, 56, 57, 63, 64, 85, 66, 90, 86 ,78, 63, 82, 58, 52, 69, 65, 80, 60, 92, 87 );
+
 $average = array_sum($temp) / count($temp);
+sort ($temp);
 echo "The average temperature is $average" . "<br>";
-echo "The five lowest temperature are: ";
-foreach ($lowest as $value) {
-    echo $value . " ";
-}
+echo "The five lowest temperature are: " .implode("," , array_slice($temp, 0 , 7));
+
 echo "<br>";
-echo "The five highest temperature are: ";
-foreach ($highest as $value) {
-    echo $value . " ";
-}
+echo "The five highest temperature are: ".implode("," , array_slice($temp, -7 , 7));
+
 
 //Task 8
 echo "<br>";echo "Array Task 8"; echo "<br>";
@@ -93,13 +89,12 @@ echo "<br>";
 // task 11
 echo "<br>";echo "Array Task 11"; 
 echo "<br>";
-        $num= 4;        //..divisor desejado
-        $min = 200;     //..menor numero
-        $max = 250;     //..maior numero
+        $num= 4;     
+        $min = 200;    
+        $max = 250;    
         $divisible = array();
         $p = 0;
         
-        //..operacoes
         echo "Numbers divisible by $num : ";
         for ($i=$min; $i <= $max; $i++) { 
             if ($i%$num == 0){
@@ -116,7 +111,38 @@ $arr = array("abcd","abc","de","hjjj","g","wer");
 $new_arr = array_map('strlen', $arr);
 echo "The shortest array length is " . min($new_arr) .
 ". The longest array length is " . max($new_arr).'.';
+echo "<br>";
 
+echo "<br>";echo "<h3> Loops Task 12 </h3>";
+$array = array("abcd","abc","de","hjjj","g","wer");
+
+$Length = 4;
+$longest = [];
+
+foreach ($array as $value) {
+    $currentLength = strlen($value);
+    if ($currentLength > $Length) {
+        $longest = [$value];
+        $Length = $currentLength;
+    } elseif ($currentLength == $Length) {
+        $longest[] = $value;
+    }
+}echo "The longest : ";
+var_export($longest);
+echo "<br>";
+$Length = 4;
+$shortest = [];
+foreach ($array as $value) {
+    $currentLength = strlen($value);
+    if ($currentLength < $Length) {
+        $shortest = [$value];
+        $Length = $currentLength;
+    } elseif ($currentLength == $Length) {
+        $longest[] = $value;
+    }
+}echo "The shortest : ";
+var_export($shortest);
+echo "<br>";
 // task 13
 echo "<br>";echo "Array Task 13"; echo "<br>";
 $arr=range(11,20);

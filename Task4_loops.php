@@ -39,6 +39,20 @@ for($letter=65;$letter <= 69;$letter++){
     $counter++;
     echo "<br>";
 }
+echo "<br> Solution 2 <br>";
+$str = 'A';
+for ($i = 1 ; $i <= 5; $i++){
+    for($x = 5-$i; $x >0 ; $x--)
+    echo 'A ';
+    for($y = 1; $y<=$i ; $y++)
+    echo "$str ";
+        echo '<br>';
+    $str++;
+}
+
+
+echo "<br>";
+
 
 //Task 4
 echo "<br>";echo "<h3> Loops Task 4 </h3>";
@@ -115,11 +129,11 @@ for($i=0;$i < strlen($str);$i++){
 //Task 9
 echo "<br>";echo "<h3> Loops Task 9 </h3>";
 echo "<table border='1' cellpadding='3' cellspacing='0'>";
-    for($number1=1;$number1 <= 5;$number1++){
+    for($n1=1;$n1 <= 5;$n1++){
         echo"<tr>";
-        for($number2=1;$number2 <= 6;$number2++){
-            $result=$number1*$number2;
-            echo "<td> $number1 * $number2 = $result </td>";
+        for($n2=1;$n2 <= 6;$n2++){
+            $result=$n1*$n2;
+            echo "<td> $n1 * $n2 = $result </td>";
         }
         echo "</tr>";
     }
@@ -144,39 +158,46 @@ for($i=1; $i <= 50;$i++){
 
 //Task 11
 echo "<br>";echo "<h3> Loops Task 11 </h3>";
-function floyed_triangle($n){
-    $number3=1;
+function triangle($n){
+    $num=1;
     for($i=1;$i <= $n ;$i++){
         for($a=1;$a <= $i; $a++){
-            echo $number3." ";
-            $number3++;
+            echo $num." ";
+            $num++;
         }
         echo "<br>";
     }
 }
-floyed_triangle(5);
+triangle(5);
 
 //Task 12
 echo "<br>";echo "<h3> Loops Task 12 </h3>";
 
 for($i=0;$i<=4;$i++){
-    for($j=4;$j>=$i;$j--){
-        echo '&nbsp;';
+    for($j=1;$j<=4-$i;$j++){
+        echo '&nbsp;&nbsp;';
     }
     for($k=0;$k<=$i;$k++){
-        echo 'A';
+        if($k >$i){
+        echo 'A ';
+    }else{
+        echo chr(ord('A ')+$k). "  ";
     }
-    echo '<br />';
+}
+    echo '<br>';
 }
 for($i=0;$i<=3;$i++){
-    for($k=0;$k<=$i+1;$k++){
-        echo '&nbsp;';
-    }
-    for($j=3;$j>=$i;$j--){
-        echo 'A';
-    }
-    echo '<br />';
-} 
+    for($j=4;$j>=4-$i;$j--){
+        echo '&nbsp;&nbsp;';
+    }$s =0 ;
+    for($k=3;$k>=$i;$k--){
+        if($k >= $i){
+             echo chr(ord('A ')+$s). "  ";
+       
+    }else{
+        echo 'A ';
+    }$s++;
+} echo '<br>'; }
 
 
 
