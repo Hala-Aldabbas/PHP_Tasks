@@ -16,7 +16,7 @@ function Prime($n)
     }
         return "$n is a prime number ";
    }
-echo Prime(3);
+echo Prime(6);
 echo "<br>";
 
 // Q2
@@ -57,9 +57,9 @@ function Armstrong($num){
   $sum=0;
   $x=$num;
   while($x !=0 ){
-      $rem = $x % 10; // To break up the digits of the main number
-      $sum = $sum + $rem*$rem*$rem; //To find the cube of each number in addition to the sum of the cube of the last digit
-      $x = $x /10; //To move between digits using .
+      $rem = $x % 10; 
+      $sum = $sum + $rem*$rem*$rem; 
+      $x = $x /10;
   }
   if ($num == $sum){
   return 'Yes! It is an Armstrong';
@@ -69,6 +69,8 @@ function Armstrong($num){
 }
 echo Armstrong(407);
 echo "<br>";
+echo Armstrong(370);
+echo "<br>";
 // Q7
 
 function palindrome($string){
@@ -77,7 +79,8 @@ function palindrome($string){
   else{
     echo 'it is not a palindrome';
   }
-}palindrome('Eva, can I see bees in a cave');
+}palindrome('Eva, can I see bees in a cave'); echo "<br>";
+palindrome('mam');
 echo "<br>";
 
 //Q8
